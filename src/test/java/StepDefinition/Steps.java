@@ -21,35 +21,35 @@ public class Steps {
 
 	WebDriver driver;
 
-	@Given("^Open the Firefox and launch the application$")
+	@Given("^Open the Browser and launch the application$")
 	public void open_the_Firefox_and_launch_the_application() throws Throwable {
 		System.out.println("This Step open the Chrome and launch the application.");
 		String homePath = System.getProperty("user.dir");
 		File file = new File(homePath + "//Drivers//chromedriver_2.38.exe");
 		System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
-		
+
 		// System.setProperty("webdriver.gecko.driver", "C://Users//joydeepr938//Desktop//Backup//Cucumber_Workspace//CucumberWithSelenium//Driver//geckodriver-v0.16.1.exe");
-		
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("headless");				
-				
-		driver= new ChromeDriver(options);
-		// driver= new ChromeDriver();
-		
+
+		//		ChromeOptions options = new ChromeOptions();
+		//		options.addArguments("headless");				
+
+		//		driver= new ChromeDriver(options);
+		driver= new ChromeDriver();
+
 		driver.manage().window().maximize();
 		driver.get("http://demo.guru99.com/v4");	
-		
+
 	}
 
 	@When("^Enter the \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void enter_the_and(String uname, String pass) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
+		// Write code here that turns the phrase above into concrete actions
 		System.out.println("This step enter the Username and Password on the login page.");
 		driver.findElement(By.name("uid")).sendKeys("username12");							
 		driver.findElement(By.name("password")).sendKeys("password12");
 		Thread.sleep(5000);
 	}
-	
+
 	@Then("^Reset the credential$")
 	public void Reset_the_credential() throws Throwable {
 		System.out.println("This step click on the Reset button.");
