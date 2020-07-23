@@ -8,7 +8,8 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "Features", 
 		glue = { "StepDefinition" } ,
-		plugin = {"html:target/cucumber-html-report"}
+		//		plugin = {"html:target/cucumber-html-report"}
+		plugin = {"pretty","html:target/cucumber-report","json:target/cucumber.json"}
 		)
 public class Runner {
 

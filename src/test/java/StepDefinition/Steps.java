@@ -31,14 +31,13 @@ public class Steps {
 		// System.setProperty("webdriver.gecko.driver", "C://Users//joydeepr938//Desktop//Backup//Cucumber_Workspace//CucumberWithSelenium//Driver//geckodriver-v0.16.1.exe");
 
 		//		ChromeOptions options = new ChromeOptions();
-		//		options.addArguments("headless");				
+		//		options.addArguments("headless");
 
 		//		driver= new ChromeDriver(options);
 		driver= new ChromeDriver();
 
 		driver.manage().window().maximize();
 		driver.get("http://demo.guru99.com/v4");	
-
 	}
 
 	@When("^Enter the \"([^\"]*)\" and \"([^\"]*)\"$")
