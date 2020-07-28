@@ -54,7 +54,6 @@ public class Steps {
 		System.out.println("This step click on the Reset button.");
 		driver.findElement(By.name("btnReset")).click();
 		driver.close();
-		System.out.println("Hi there!!");
 	}
 
 }
