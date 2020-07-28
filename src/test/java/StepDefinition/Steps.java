@@ -22,7 +22,7 @@ public class Steps {
 	WebDriver driver;
 
 	@Given("^Open the Browser and launch the application$")
-	public void open_the_Firefox_and_launch_the_application() throws Throwable {
+	public void open_the_Browser_and_launch_the_application() throws Throwable {
 		System.out.println("This Step open the Chrome and launch the application.");
 		String homePath = System.getProperty("user.dir");
 		File file = new File(homePath + "//Drivers//chromedriver.exe");
